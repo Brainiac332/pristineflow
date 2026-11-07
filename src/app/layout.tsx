@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { BRAND } from "@/lib/config";
+import { StructuredData } from "@/components/seo/StructuredData";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-display",
@@ -70,7 +71,10 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${inter.variable} ${jetbrains.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <StructuredData />
+        {children}
+      </body>
     </html>
   );
 }

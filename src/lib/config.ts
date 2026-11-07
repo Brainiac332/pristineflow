@@ -8,6 +8,7 @@ export const BRAND = {
   tagline: "Experience the Difference of a Truly Clean Space.",
   description:
     "Professional cleaning solutions designed to make your home and workplace fresher, healthier, and more welcoming.",
+  url: "https://pristineflow.example",
   founded: "2014",
   // Placeholder phone — replace with the client's real number.
   phone: "+971501234567",

@@ -1,5 +1,3 @@
-"use client";
-
 import type { LucideIcon } from "lucide-react";
 import { BRAND } from "./config";
 
@@ -13,7 +11,7 @@ export interface Service {
   longDescription: string;
   benefits: string[];
   image: string;
-  icon: LucideIcon;
+  icon: string;
   cta: string;
   order: number;
 }
@@ -23,7 +21,7 @@ export interface ValueProp {
   title: string;
   description: string;
   image?: string;
-  icon: LucideIcon;
+  icon: string;
   order: number;
 }
 
@@ -33,7 +31,7 @@ export interface Step {
   title: string;
   description: string;
   image?: string;
-  icon: LucideIcon;
+  icon: string;
 }
 
 export interface BeforeAfterPair {
@@ -80,67 +78,32 @@ export interface PricingPackage {
 }
 
 /* --------------------------------------------------------------------------
-   Icon imports (lazy-loaded in components to avoid SSR bloat)
+   Icon name constants (used by components to lazily load icons)
 -------------------------------------------------------------------------- */
-export const ICON_MAP: Record<string, () => Promise<{ default: LucideIcon }>> = {
-  Home: () => import("lucide-react").then((m) => m.Home),
-  Building: () => import("lucide-react").then((m) => m.Building),
-  Sparkles: () => import("lucide-react").then((m) => m.Sparkles),
-  Truck: () => import("lucide-react").then((m) => m.Truck),
-  Crown: () => import("lucide-react").then((m) => m.Crown),
-  Shield: () => import("lucide-react").then((m) => m.Shield),
-  CheckCircle: () => import("lucide-react").then((m) => m.CheckCircle),
-  Clock: () => import("lucide-react").then((m) => m.Clock),
-  Users: () => import("lucide-react").then((m) => m.Users),
-  Star: () => import("lucide-react").then((m) => m.Star),
-  Award: () => import("lucide-react").then((m) => m.Award),
-  Target: () => import("lucide-react").then((m) => m.Target),
-  Heart: () => import("lucide-react").then((m) => m.Heart),
-  Leaf: () => import("lucide-react").then((m) => m.Leaf),
-  Zap: () => import("lucide-react").then((m) => m.Zap),
-  Sparkle: () => import("lucide-react").then((m) => m.Sparkle),
-  Layers: () => import("lucide-react").then((m) => m.Layers),
-  Wand2: () => import("lucide-react").then((m) => m.Wand2),
-  SprayCan: () => import("lucide-react").then((m) => m.SprayCan),
-  Droplets: () => import("lucide-react").then((m) => m.Droplets),
-  Window: () => import("lucide-react").then((m) => m.Window),
-  Hammer: () => import("lucide-react").then((m) => m.Hammer),
-  Scrubber: () => import("lucide-react").then((m) => m.Scrubber),
-  Calendar: () => import("lucide-react").then((m) => m.Calendar),
-  Mail: () => import("lucide-react").then((m) => m.Mail),
-  Phone: () => import("lucide-react").then((m) => m.Phone),
-  MapPin: () => import("lucide-react").then((m) => m.MapPin),
-  ArrowRight: () => import("lucide-react").then((m) => m.ArrowRight),
-  ChevronDown: () => import("lucide-react").then((m) => m.ChevronDown),
-  ChevronUp: () => import("lucide-react").then((m) => m.ChevronUp),
-  ChevronLeft: () => import("lucide-react").then((m) => m.ChevronLeft),
-  ChevronRight: () => import("lucide-react").then((m) => m.ChevronRight),
-  Menu: () => import("lucide-react").then((m) => m.Menu),
-  X: () => import("lucide-react").then((m) => m.X),
-  MessageSquare: () => import("lucide-react").then((m) => m.MessageSquare),
-  Loader2: () => import("lucide-react").then((m) => m.Loader2),
-  Check: () => import("lucide-react").then((m) => m.Check),
-  AlertCircle: () => import("lucide-react").then((m) => m.AlertCircle),
-  Plus: () => import("lucide-react").then((m) => m.Plus),
-  Minus: () => import("lucide-react").then((m) => m.Minus),
-  Sun: () => import("lucide-react").then((m) => m.Sun),
-  Moon: () => import("lucide-react").then((m) => m.Moon),
-  RotateCcw: () => import("lucide-react").then((m) => m.RotateCcw),
-  Search: () => import("lucide-react").then((m) => m.Search),
-  Filter: () => import("lucide-react").then((m) => m.Filter),
-  Grid: () => import("lucide-react").then((m) => m.Grid),
-  Image: () => import("lucide-react").then((m) => m.Image),
-  Eye: () => import("lucide-react").then((m) => m.Eye),
-  ExternalLink: () => import("lucide-react").then((m) => m.ExternalLink),
-  Instagram: () => import("lucide-react").then((m) => m.Instagram),
-  Facebook: () => import("lucide-react").then((m) => m.Facebook),
-  Linkedin: () => import("lucide-react").then((m) => m.Linkedin),
-  Mail: () => import("lucide-react").then((m) => m.Mail),
-  Phone: () => import("lucide-react").then((m) => m.Phone),
-  MapPin: () => import("lucide-react").then((m) => m.MapPin),
-  Clock: () => import("lucide-react").then((m) => m.Clock),
-  ArrowUp: () => import("lucide-react").then((m) => m.ArrowUp),
-};
+export const ICON_NAMES = {
+  Home: "Home",
+  Building: "Building",
+  Sparkles: "Sparkles",
+  Truck: "Truck",
+  Crown: "Crown",
+  Shield: "Shield",
+  CheckCircle: "CheckCircle",
+  Clock: "Clock",
+  Users: "Users",
+  Star: "Star",
+  Award: "Award",
+  Target: "Target",
+  Heart: "Heart",
+  Leaf: "Leaf",
+  Zap: "Zap",
+  Grid: "Grid",
+  MessageSquare: "MessageSquare",
+  Calendar: "Calendar",
+  Wrench: "Wrench",
+  ChevronRight: "ChevronRight",
+} as const;
+
+export type IconName = (typeof ICON_NAMES)[keyof typeof ICON_NAMES];
 
 /* --------------------------------------------------------------------------
    Service data (10 services)
@@ -160,7 +123,7 @@ export const SERVICES: Service[] = [
       "Satisfaction guarantee — we'll re-clean any missed area",
     ],
     image: "/img/svc_residential.jpg",
-    icon: ICON_MAP.Home!,
+    icon: ICON_NAMES.Home,
     cta: "Book Residential Cleaning",
     order: 1,
   },
@@ -178,7 +141,7 @@ export const SERVICES: Service[] = [
       "High-touch surface disinfection",
     ],
     image: "/img/svc_deep.jpg",
-    icon: ICON_MAP.Sparkles!,
+    icon: ICON_NAMES.Sparkles,
     cta: "Schedule Deep Clean",
     order: 2,
   },
@@ -196,7 +159,7 @@ export const SERVICES: Service[] = [
       "Dedicated account manager",
     ],
     image: "/img/svc_office.jpg",
-    icon: ICON_MAP.Building!,
+    icon: ICON_NAMES.Building,
     cta: "Get Commercial Quote",
     order: 3,
   },
@@ -214,7 +177,7 @@ export const SERVICES: Service[] = [
       "Fast turnaround for tight moving timelines",
     ],
     image: "/img/svc_move.jpg",
-    icon: ICON_MAP.Truck!,
+    icon: ICON_NAMES.Truck,
     cta: "Book Move Clean",
     order: 4,
   },
@@ -232,7 +195,7 @@ export const SERVICES: Service[] = [
       "Recurring or one-off engagements",
     ],
     image: "/img/svc_villa.jpg",
-    icon: ICON_MAP.Crown!,
+    icon: ICON_NAMES.Crown,
     cta: "Request Villa Service",
     order: 5,
   },
@@ -250,7 +213,7 @@ export const SERVICES: Service[] = [
       "Key-drop / concierge coordination",
     ],
     image: "/img/svc_apartment.jpg",
-    icon: ICON_MAP.Layers!,
+    icon: ICON_NAMES.Grid,
     cta: "Book Apartment Clean",
     order: 6,
   },
@@ -268,7 +231,7 @@ export const SERVICES: Service[] = [
       "Quick-dry, low-moisture process",
     ],
     image: "/img/svc_sofa.jpg",
-    icon: ICON_MAP.SprayCan!,
+    icon: ICON_NAMES.Sparkles,
     cta: "Refresh Your Upholstery",
     order: 7,
   },
@@ -286,7 +249,7 @@ export const SERVICES: Service[] = [
       "Hard-water stain treatment available",
     ],
     image: "/img/svc_window.jpg",
-    icon: ICON_MAP.Window!,
+    icon: "Window",
     cta: "Get Window Quote",
     order: 8,
   },
@@ -304,7 +267,7 @@ export const SERVICES: Service[] = [
       "Fast mobilisation for project deadlines",
     ],
     image: "/img/svc_post.jpg",
-    icon: ICON_MAP.Hammer!,
+    icon: ICON_NAMES.Wrench,
     cta: "Schedule Post-Build Clean",
     order: 9,
   },
@@ -322,7 +285,7 @@ export const SERVICES: Service[] = [
       "Exterior: adjustable pressure + eco-detergents",
     ],
     image: "/img/svc_specialized.jpg",
-    icon: ICON_MAP.Scrubber!,
+    icon: ICON_NAMES.Star,
     cta: "Explore Specialized",
     order: 10,
   },
@@ -337,7 +300,7 @@ export const VALUE_PROPS: ValueProp[] = [
     title: "Trained Professionals",
     description:
       "Every team member completes our certified training programme covering technique, safety, product knowledge, and customer etiquette. Background-verified and uniformly presented.",
-    icon: ICON_MAP.Users!,
+    icon: ICON_NAMES.Users,
     order: 1,
   },
   {
@@ -345,7 +308,7 @@ export const VALUE_PROPS: ValueProp[] = [
     title: "Attention to Detail",
     description:
       "Our checklists have checklists. From baseboards to blind slats, appliance interiors to high-touch points — nothing is overlooked. Quality control photos on every job.",
-    icon: ICON_MAP.Target!,
+    icon: ICON_NAMES.Target,
     order: 2,
   },
   {
@@ -353,7 +316,7 @@ export const VALUE_PROPS: ValueProp[] = [
     title: "Flexible Scheduling",
     description:
       "Book online in 60 seconds. Choose weekly, bi-weekly, monthly, or one-off. Morning, afternoon, or evening slots. Reschedule up to 24 hrs before at no charge.",
-    icon: ICON_MAP.Calendar!,
+    icon: ICON_NAMES.Calendar,
     order: 3,
   },
   {
@@ -361,7 +324,7 @@ export const VALUE_PROPS: ValueProp[] = [
     title: "Reliable Delivery",
     description:
       "We show up on time, every time. Dedicated teams mean familiar faces who know your space and preferences. Emergency re-clean within 24 hrs if anything falls short.",
-    icon: ICON_MAP.Shield!,
+    icon: ICON_NAMES.Shield,
     order: 4,
   },
   {
@@ -369,7 +332,7 @@ export const VALUE_PROPS: ValueProp[] = [
     title: "Quality-Focused Approach",
     description:
       "Premium, eco-certified products. HEPA vacuums. Microfibre systems. Colour-coded cloths to prevent cross-contamination. We invest in the tools that produce better results.",
-    icon: ICON_MAP.Star!,
+    icon: ICON_NAMES.Star,
     order: 5,
   },
   {
@@ -377,7 +340,7 @@ export const VALUE_PROPS: ValueProp[] = [
     title: "Customer Satisfaction",
     description:
       "Your feedback drives our process. Post-service surveys, direct management escalation, and a no-questions re-clean policy. We're not done until you're delighted.",
-    icon: ICON_MAP.Heart!,
+    icon: ICON_NAMES.Heart,
     order: 6,
   },
 ];
@@ -392,7 +355,7 @@ export const PROCESS_STEPS: Step[] = [
     title: "Choose Your Service",
     description:
       "Browse our services or tell us what you need. We'll match you with the right package — from a one-off deep clean to a recurring residential plan.",
-    icon: ICON_MAP.Grid!,
+    icon: ICON_NAMES.Grid,
   },
   {
     id: "details",
@@ -400,7 +363,7 @@ export const PROCESS_STEPS: Step[] = [
     title: "Tell Us Your Requirements",
     description:
       "Share property details: type, size, rooms, specific areas of focus, preferred dates, and any special instructions. The more we know, the better we prepare.",
-    icon: ICON_MAP.MessageSquare!,
+    icon: ICON_NAMES.MessageSquare,
   },
   {
     id: "schedule",
@@ -408,7 +371,7 @@ export const PROCESS_STEPS: Step[] = [
     title: "Schedule Your Cleaning",
     description:
       "Pick a date and time that works for you. Get instant confirmation. Need to adjust? Reschedule or cancel up to 24 hours before at no cost.",
-    icon: ICON_MAP.Calendar!,
+    icon: ICON_NAMES.Calendar,
   },
   {
     id: "enjoy",
@@ -416,7 +379,7 @@ export const PROCESS_STEPS: Step[] = [
     title: "Enjoy Your Fresh, Clean Space",
     description:
       "Our team arrives on time, works efficiently, and leaves your space spotless. You receive a completion summary and a quick feedback link.",
-    icon: ICON_MAP.Sparkle!,
+    icon: ICON_NAMES.Sparkles,
   },
 ];
 
@@ -488,7 +451,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "gallery-carpet",
-    image: "/img/gallery_7.jpg",
+    image: "/img/gallery_6.jpg",
     title: "Carpet Extraction Cleaning",
     category: "Specialized",
     alt: "Carpet being cleaned with extraction machine",
