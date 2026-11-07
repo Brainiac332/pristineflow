@@ -1,0 +1,322 @@
+{
+  "hero_1": {
+    "file": "/img/hero_1.jpg",
+    "source": "flickr",
+    "creator": "Frederick Md Publicity",
+    "license": "by",
+    "width": 1024,
+    "query": "cleaning service professional"
+  },
+  "hero_2": {
+    "file": "/img/hero_2.jpg",
+    "source": "flickr",
+    "creator": "outreachr.com",
+    "license": "by",
+    "width": 1024,
+    "query": "modern living room clean"
+  },
+  "hero_3": {
+    "file": "/img/hero_3.jpg",
+    "source": "flickr",
+    "creator": "Sean MacEntee",
+    "license": "by",
+    "width": 1024,
+    "query": "office cleaning"
+  },
+  "trust_1": {
+    "file": "/img/trust_1.jpg",
+    "source": "flickr",
+    "creator": "stavos",
+    "license": "by-nc-nd",
+    "width": 960,
+    "query": "professional cleaner uniform"
+  },
+  "trust_2": {
+    "file": "/img/trust_2.jpg",
+    "source": "flickr",
+    "creator": "Cushing Memorial Library and Archives, Texas A&M",
+    "license": "by-nc-nd",
+    "width": 1024,
+    "query": "cleaning equipment"
+  },
+  "trust_3": {
+    "file": "/img/trust_3.jpg",
+    "source": "flickr",
+    "creator": "theirhistory",
+    "license": "by-nc-sa",
+    "width": 862,
+    "query": "cleaning cloth wipe"
+  },
+  "trust_4": {
+    "file": "/img/trust_4.jpg",
+    "source": "flickr",
+    "creator": "Rubbermaid Products",
+    "license": "by",
+    "width": 1024,
+    "query": "mop floor cleaning"
+  },
+  "svc_residential": {
+    "file": "/img/svc_residential.jpg",
+    "source": "flickr",
+    "creator": "tracydekalb",
+    "license": "by",
+    "width": 1024,
+    "query": "living room clean"
+  },
+  "svc_deep": {
+    "file": "/img/svc_deep.jpg",
+    "source": "flickr",
+    "creator": "avlxyz",
+    "license": "by-sa",
+    "width": 1024,
+    "query": "kitchen deep cleaning"
+  },
+  "svc_office": {
+    "file": "/img/svc_office.jpg",
+    "source": "flickr",
+    "creator": "kevin dooley",
+    "license": "by",
+    "width": 1024,
+    "query": "office space clean"
+  },
+  "svc_move": {
+    "file": "/img/svc_move.jpg",
+    "source": "flickr",
+    "creator": "Jason Lander",
+    "license": "by",
+    "width": 1024,
+    "query": "moving house clean"
+  },
+  "svc_villa": {
+    "file": "/img/svc_villa.jpg",
+    "source": "flickr",
+    "creator": "tommerton2010",
+    "license": "by",
+    "width": 1024,
+    "query": "luxury house interior"
+  },
+  "svc_apartment": {
+    "file": "/img/svc_apartment.jpg",
+    "source": "flickr",
+    "creator": "ashkyd",
+    "license": "by",
+    "width": 1024,
+    "query": "apartment interior"
+  },
+  "svc_sofa": {
+    "file": "/img/svc_sofa.jpg",
+    "source": "wikimedia",
+    "creator": "Eric Polk",
+    "license": "by-sa",
+    "width": 1695,
+    "query": "sofa upholstery"
+  },
+  "svc_window": {
+    "file": "/img/svc_window.jpg",
+    "source": "flickr",
+    "creator": "Beige Alert",
+    "license": "by",
+    "width": 1024,
+    "query": "window cleaning"
+  },
+  "svc_post": {
+    "file": "/img/svc_post.jpg",
+    "source": "wikimedia",
+    "creator": "CleaningNJanitorial",
+    "license": "by-sa",
+    "width": 2046,
+    "query": "construction cleaning"
+  },
+  "svc_specialized": {
+    "file": "/img/svc_specialized.jpg",
+    "source": "flickr",
+    "creator": "Boston Public Library",
+    "license": "by",
+    "width": 1024,
+    "query": "carpet cleaning"
+  },
+  "why_1": {
+    "file": "/img/why_1.jpg",
+    "source": "flickr",
+    "creator": "Frederick Md Publicity",
+    "license": "by",
+    "width": 1024,
+    "query": "cleaning team professional"
+  },
+  "why_2": {
+    "file": "/img/why_2.jpg",
+    "source": "flickr",
+    "creator": "Frederick Md Publicity",
+    "license": "by",
+    "width": 1024,
+    "query": "attention detail cleaning"
+  },
+  "why_3": {
+    "file": "/img/why_3.jpg",
+    "source": "flickr",
+    "creator": "stellahyc910",
+    "license": "by",
+    "width": 923,
+    "query": "schedule calendar"
+  },
+  "why_4": {
+    "file": "/img/why_4.jpg",
+    "source": "flickr",
+    "creator": "16:9clue",
+    "license": "by",
+    "width": 1024,
+    "query": "clean office happy"
+  },
+  "why_5": {
+    "file": "/img/why_5.jpg",
+    "source": "flickr",
+    "creator": "Boston Public Library",
+    "license": "by",
+    "width": 1024,
+    "query": "quality cleaning"
+  },
+  "why_6": {
+    "file": "/img/why_6.jpg",
+    "source": "flickr",
+    "creator": "Phil Dowsing Creative",
+    "license": "by-nc-nd",
+    "width": 1024,
+    "query": "customer service"
+  },
+  "gallery_1": {
+    "file": "/img/gallery_1.jpg",
+    "source": "flickr",
+    "creator": "Jess Pac",
+    "license": "by",
+    "width": 1024,
+    "query": "kitchen clean modern"
+  },
+  "gallery_2": {
+    "file": "/img/gallery_2.jpg",
+    "source": "flickr",
+    "creator": "andrechinn",
+    "license": "by",
+    "width": 1024,
+    "query": "bathroom clean luxury"
+  },
+  "gallery_3": {
+    "file": "/img/gallery_3.jpg",
+    "source": "rawpixel",
+    "creator": null,
+    "license": "cc0",
+    "width": 5733,
+    "query": "living room clean"
+  },
+  "gallery_4": {
+    "file": "/img/gallery_4.jpg",
+    "source": "flickr",
+    "creator": "steve-and-diane",
+    "license": "by-sa",
+    "width": 1024,
+    "query": "office space"
+  },
+  "gallery_5": {
+    "file": "/img/gallery_5.jpg",
+    "source": "flickr",
+    "creator": "commercialcarpetcleaningldn",
+    "license": "pdm",
+    "width": 1024,
+    "query": "cleaning professional"
+  },
+  "gallery_6": {
+    "file": "/img/gallery_6.jpg",
+    "source": "flickr",
+    "creator": "Beige Alert",
+    "license": "by",
+    "width": 1024,
+    "query": "window clean"
+  },
+  "gallery_8": {
+    "file": "/img/gallery_8.jpg",
+    "source": "flickr",
+    "creator": "cafemama",
+    "license": "by-nc-sa",
+    "width": 1024,
+    "query": "dining room clean"
+  },
+  "gallery_9": {
+    "file": "/img/gallery_9.jpg",
+    "source": "flickr",
+    "creator": "litlnemo",
+    "license": "by-nc-sa",
+    "width": 1024,
+    "query": "bedroom clean"
+  },
+  "gallery_10": {
+    "file": "/img/gallery_10.jpg",
+    "source": "flickr",
+    "creator": "Katie Earley",
+    "license": "by-nc-nd",
+    "width": 1024,
+    "query": "cleaning bucket"
+  },
+  "gallery_11": {
+    "file": "/img/gallery_11.jpg",
+    "source": "flickr",
+    "creator": "purplemattfish",
+    "license": "by-nc-nd",
+    "width": 1024,
+    "query": "floor clean shiny"
+  },
+  "gallery_12": {
+    "file": "/img/gallery_12.jpg",
+    "source": "flickr",
+    "creator": "David Hoffman '41",
+    "license": "by-nc-sa",
+    "width": 1024,
+    "query": "entrance hall clean"
+  },
+  "before_1": {
+    "file": "/img/before_1.jpg",
+    "source": "flickr",
+    "creator": "Sophe89",
+    "license": "by-nc-nd",
+    "width": 853,
+    "query": "messy room"
+  },
+  "before_2": {
+    "file": "/img/before_2.jpg",
+    "source": "flickr",
+    "creator": "saturnism",
+    "license": "by-sa",
+    "width": 1024,
+    "query": "dirty kitchen"
+  },
+  "after_1": {
+    "file": "/img/after_1.jpg",
+    "source": "flickr",
+    "creator": "hannah.rosen",
+    "license": "by",
+    "width": 1024,
+    "query": "clean room"
+  },
+  "after_2": {
+    "file": "/img/after_2.jpg",
+    "source": "flickr",
+    "creator": "Arthaey",
+    "license": "by-nc-nd",
+    "width": 1024,
+    "query": "clean kitchen"
+  },
+  "testimonial_1": {
+    "file": "/img/testimonial_1.jpg",
+    "source": "flickr",
+    "creator": "Pictures by Ann",
+    "license": "by",
+    "width": 990,
+    "query": "clean office"
+  },
+  "cta_1": {
+    "file": "/img/cta_1.jpg",
+    "source": "flickr",
+    "creator": "Darwin70",
+    "license": "by-nc-sa",
+    "width": 1024,
+    "query": "clean house"
+  }
+}
